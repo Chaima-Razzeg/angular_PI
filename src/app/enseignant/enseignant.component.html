@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <h1>Liste des enseignants</h1>
+        <table class="table table-striped">
+          <tr>
+            <th>Cin</th>
+
+            <th>nom</th>
+            <th>Prenom</th>
+            <th>email</th>
+            <th>tel</th>
+           
+            <th>détail</th>
+            <th>Modifier</th>
+            <th>Supprimer</th>
+
+
+
+          </tr>
+          <tbody *ngFor="let e of enseignant">
+            <tr>
+              <td>{{ e.cin }}</td>
+              <td>{{ e.nomEns }}</td>
+              <td>{{ e.prenomEns }}</td>
+              <td>{{ e.email }}</td>
+              <td>{{ e.tel }}</td>
+       
+              <td><a class="btn btn-dark" [routerLink]="['/detailEnseignant', e.idEnseignant]">Détail</a></td>
+
+              <td><a class="btn btn-success" [routerLink]="['/updateEnseignant',e.idEnseignant]">Modifier</a></td>
+              <td><a class="btn btn-danger" (click)="supprimerEnseignant(e)">Supprimer</a></td> 
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

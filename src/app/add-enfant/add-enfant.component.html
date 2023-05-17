@@ -1,0 +1,82 @@
+<div class="container">
+    <div>
+        <h2>Inscrire un enfant:</h2>
+    </div>
+    <form>
+               
+    
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Identifiant</label>
+            <input type="text" [(ngModel)]="newEnfant.identifiant" name="identifiant" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom</label>
+            <input type="text" [(ngModel)]="newEnfant.nomEnf" name="nomEnf" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Prenom</label>
+            <input type="text" [(ngModel)]="newEnfant.prenomEnf" name="prenomEnf" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Date de naissance</label>
+            <input type="date" [(ngModel)]="newEnfant.dateNaissEnf" name="dateNaissEnf" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Genre</label><br>
+            <input type="radio" [(ngModel)]="newEnfant.genre" name="genre" value="Fille"> Fille
+            <input type="radio" [(ngModel)]="newEnfant.genre" name="genre" value="Garçon"> Garçon
+        </div>
+         
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Adresse</label>
+            <textarea [(ngModel)]="newEnfant.adresse" name="adresse" class="form-control"></textarea>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom complet du tuteur</label>
+            <input type="text" [(ngModel)]="newEnfant.tuteur" name="tuteur" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Téléphone du tuteur</label>
+            <input type="text" [(ngModel)]="newEnfant.numTut" name="numTut" class="form-control">
+        </div>     
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label> La situation matrimoniale des parents ou tuteurs légaux </label>
+            <select name="situationFam" [(ngModel)]="newEnfant.situationFam" class="form-control">
+                <option value="Mariés">Mariés</option>
+                <option value="Divorcés">Divorcés</option>
+                <option value="Séparés">Séparés</option>
+                <option value="Veufs/Veuves">Veufs/Veuves</option>
+                <option value="Autre">Autre</option>
+              </select>        </div>     
+         
+         <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>maladies</label>
+            <textarea [(ngModel)]="newEnfant.maladies" name="maladies" class="form-control"></textarea>
+        </div>     
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>infoSupp</label>
+            <textarea [(ngModel)]="newEnfant.infoSupp" name="infoSupp" class="form-control"></textarea>
+        </div>  
+        <div >
+            <p class="text-info" style="font-size: 20px;" >Classe</p >
+            <select
+              class="form-control form-control-lg"
+              id="idCla"
+              name="idCla"
+              [(ngModel)]="newIdCla"
+            >
+              <option *ngFor="let cla of classes" [value]="cla.idClasse">
+                {{ cla.numClasse }} 
+              </option>
+            </select>
+          </div>
+
+
+
+       
+<div class="mt-2">
+    <button type="submit" (click)="ajouterEnfant()" class="btn btn-success">Ajouter</button>
+</div>
+</form>
+</div>

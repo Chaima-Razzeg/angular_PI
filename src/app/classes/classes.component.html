@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table class="table table-striped">
+                <h1>Liste des classes</h1>
+
+                <tr>
+                    <th>Numero de la classe</th>
+                    <th>nombre max d'enfants</th>
+                    <th>Salle</th>
+                    <th>Enseignant</th>
+                </tr>
+                <tbody *ngFor="let classe of classes">
+                    <tr>
+
+                        <td>{{classe.numClasse}}</td>
+                        <td>{{classe.nbmaxEnfant}}</td>
+                        <td>{{classe.salle}}</td>
+                        <td>{{classe.enseignant.nomEns}} {{classe.enseignant.prenomEns}}</td>
+
+                        <td><a class="btn btn-success" [routerLink]="['/updateClasse',classe.idClasse]">Modifier</a>
+                        </td>
+                        <td>        <a (click)="supprimerClasse(classe.idClasse)">Supprimer</a></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

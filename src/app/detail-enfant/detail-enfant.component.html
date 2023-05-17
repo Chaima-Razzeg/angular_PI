@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <h1>Détails de l'enfant</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <p><strong>Identifiant :</strong> {{ enfant.identifiant }}</p>
+            <p><strong>Nom :</strong> {{ enfant.nomEnf }}</p>
+            <p><strong>Prénom :</strong> {{ enfant.prenomEnf }}</p>
+            <p><strong>Date de naissance :</strong> {{ enfant.dateNaissEnf | date:'dd/mm/yyyy' }}</p>
+            <p><strong>Genre :</strong> {{ enfant.genre }}</p>
+            <p><strong>Adresse :</strong> {{ enfant.adresse }}</p>
+          </div>
+          <div class="col-md-6">
+            <p><strong>Tuteur :</strong> {{ enfant.tuteur }}</p>
+            <p><strong>Numéro de tuteur :</strong> {{ enfant.numTut }}</p>
+            <p><strong>Situation familiale :</strong> {{ enfant.situationFam }}</p>
+            <p><strong>Résidence :</strong> {{ enfant.residence }}</p>
+            <p><strong>Maladies :</strong> {{ enfant.maladies }}</p>
+            <p><strong>Informations supplémentaires :</strong> {{ enfant.infoSupp }}</p>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-12">
+            <p><strong>Classe :</strong> {{ enfant.classe.numClasse }}</p>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-12">
+            <p><strong>Image :</strong></p>
+            <img src="{{ enfant.imageStr }}" alt="Image de l'enfant" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

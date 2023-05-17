@@ -1,0 +1,68 @@
+<div class="container">
+    <div>
+    <h2>Modifier enseignant</h2>
+    </div>
+    <form >
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label hidden >ID </label>
+    <input hidden type="text" [(ngModel)]="currentEnseignant.idEnseignant" name="idEnseignant" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+    <label >Cin</label>
+    <input type="text"[(ngModel)]= "currentEnseignant.cin"
+    name="cin" class="form-control">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label >Nom:</label>
+    <input type="text" [(ngModel)]= "currentEnseignant.nomEns"
+    name="nomEns" class="form-control">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >Prenom:</label>
+        <input type="text" [(ngModel)]= "currentEnseignant.prenomEns"
+        name="prenomEns" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label >Date naissance:</label>
+            <input type="date" [(ngModel)]= "currentEnseignant.dateNaissEns"
+            name="dateNaissEns" class="form-control">
+            </div>
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <label >Adresse:</label>
+                <input type="text" [(ngModel)]= "currentEnseignant.adresse"
+                name="adresse" class="form-control">
+                </div>
+                <div class="col-sm-2 col-md-2 col-lg-2">
+                    <label >Adresse:</label>
+                    <input type="text" [(ngModel)]= "currentEnseignant.email"
+                    name="email" class="form-control">
+                    </div>
+                    <div class="col-sm-2 col-md-2 col-lg-2">
+                        <label >Telephone:</label>
+                        <input type="number" [(ngModel)]= "currentEnseignant.tel"
+                        name="tel" class="form-control">
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <label>Diplome:</label>
+                            <select [(ngModel)]="currentEnseignant.diplome" name="diplome" class="form-control">
+                                <option value="Baccalauréat">Baccalauréat</option>
+                                <option value="Licence">Licence</option>
+                                <option value="Master">Master</option>
+                                <option value="Doctorat">Doctorat</option>
+                            </select>
+                        </div>
+                        
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                                <label >Spécialité:</label>
+                                <input type="text" [(ngModel)]= "currentEnseignant.specialite"
+                                name="specialite" class="form-control">
+                                </div>
+
+
+
+<div class="mt-2">
+<button type="submit" (click)="updateEnseignant()" class="btn btn-success">Modifier</button>
+</div>
+</form>
+
+</div>

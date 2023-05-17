@@ -1,0 +1,57 @@
+<div class="container">
+    <div>
+    <h2>Modifier une classe :</h2>
+    </div>
+    <form >
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label hidden  >ID Classe</label>
+    <input hidden type="text" [(ngModel)]="currentClasse.idClasse"
+    name="idClasse" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <label>numClasse:</label>
+        <select [(ngModel)]="currentClasse.numClasse" name="numClasse" class="form-control">
+            <option value="1ere année">1ere année</option>
+            <option value="2eme année">2eme année</option>
+            <option value="3eme année">3eme année</option>
+            <option value="4eme année">4eme année</option>
+            <option value="5eme année">5eme année</option>
+            <option value="6eme année">6eme année</option>
+        </select>
+    </div>
+    
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label >nbmaxEnfant</label>
+    <input type="number" [(ngModel)]= "currentClasse.nbmaxEnfant"
+    name="nbmaxEnfant" class="form-control">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+      <label>Salle</label>
+      <select [(ngModel)]="currentClasse.salle" name="salle" class="form-control">
+        <option value="Les Petits Lapins">Les Petits Lapins</option>
+        <option value="Les Joyeux Oursons">Les Joyeux Oursons</option>
+        <option value="Les Minis Papillons">Les Minis Papillons</option>
+        <option value="Les Étoiles Filantes">Les Étoiles Filantes</option>
+        <option value="Les Petites Abeilles">Les Petites Abeilles</option>
+        <option value="Les Rayons de Soleil">Les Rayons de Soleil</option>
+      </select>
+    </div>
+    
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <p class="text-info" style="font-size: 20px;" >Enseignant</p >
+            <select
+              class="form-control form-control-lg"
+              id="idEns"
+              name="idEns"
+              [(ngModel)]="updatedEnsId"
+            >
+              <option *ngFor="let ens of enseignants" [value]="ens.idEnseignant">
+                {{ ens.nomEns }}
+              </option>
+            </select>
+          </div>
+<div class="mt-2">
+<button type="submit" (click)="updateClasse()" class="btn btn-success">Modifer</button>
+</div>
+</form>
+</div>
